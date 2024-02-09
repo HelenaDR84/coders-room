@@ -9,5 +9,6 @@
   <h1 class="text-3xl font-bold underline text-red-500">
     ¡Bienvenidas Coders!
   </h1>
+  <h2>Testing Home</h2>
 </body>
 </html>
