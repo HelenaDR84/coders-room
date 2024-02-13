@@ -21,9 +21,10 @@ return new class extends Migration
             $table->string('recording');
             $table->string('presentation');
             $table->string('repository');
-            $table->unsignedBigInteger('extra_resources_id1');
-            $table->unsignedBigInteger('extra_resources_id2');
-            $table->unsignedBigInteger('extra_resources_id3');
+            $table->unsignedBigInteger('extra_resources_id1')->nullable();
+            $table->unsignedBigInteger('extra_resources_id2')->nullable();
+            $table->unsignedBigInteger('extra_resources_id3')->nullable();
+            
             $table->foreign('type_id')->references('id')->on('type');
             $table->foreign('category_id')->references('id')->on('category');
             $table->foreign('extra_resources_id1')->references('id')->on('extra_resources');
