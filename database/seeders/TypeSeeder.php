@@ -14,7 +14,7 @@ class TypeSeeder extends Seeder
     public function run(): void
     {
         Type::create(["title" => "Masterclass"]);
-        Type::create(["title" => "Píldora"]);
+        Type::create(["title" => "Capsule"]);
         Type::create(["title" => "Coding live"]);
         Type::create(["title" => "Transversal"]);
     }
