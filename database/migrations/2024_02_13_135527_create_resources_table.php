@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('resources', function (Blueprint $table) {
             $table->id();
-            $table->timestamps(); 
+            $table->timestamps();
             $table->unsignedBigInteger('type_id');
             $table->unsignedBigInteger('category_id');
             $table->string('title');
@@ -21,15 +21,15 @@ return new class extends Migration
             $table->string('recording');
             $table->string('presentation');
             $table->string('repository');
-            $table->unsignedBigInteger('extra_resources_id1')->nullable();
-            $table->unsignedBigInteger('extra_resources_id2')->nullable();
-            $table->unsignedBigInteger('extra_resources_id3')->nullable();
-            
+            $table->unsignedBigInteger('extra_resource_id1')->nullable();
+            $table->unsignedBigInteger('extra_resource_id2')->nullable();
+            $table->unsignedBigInteger('extra_resource_id3')->nullable();
+
             $table->foreign('type_id')->references('id')->on('types');
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->foreign('extra_resources_id1')->references('id')->on('extra_resources');
-            $table->foreign('extra_resources_id2')->references('id')->on('extra_resources');
-            $table->foreign('extra_resources_id3')->references('id')->on('extra_resources');
+            $table->foreign('extra_resource_id1')->references('id')->on('extra_resources');
+            $table->foreign('extra_resource_id2')->references('id')->on('extra_resources');
+            $table->foreign('extra_resource_id3')->references('id')->on('extra_resources');
         });
     }
 
