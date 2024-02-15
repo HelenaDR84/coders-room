@@ -13,7 +13,7 @@
         <p>The table is empty</p>
     @else
         @foreach($resources as $resource)
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center mb-3 p-3">
                 <div>
                     <h2>{{ $resource->title }}</h2>
                     <p><strong>Author:</strong> {{ $resource->author }}</p>
@@ -24,6 +24,6 @@
             </div>
         @endforeach
     @endif
-
+    <a href="{{ route('resource.create') }}" class="mt-4 text-blue-500 p-3">Add Resource</a>
 </body>
 </html>

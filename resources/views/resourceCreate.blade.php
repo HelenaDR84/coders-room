@@ -11,13 +11,15 @@
 
         <label for="type_id">Type:</label>
         <select name="type_id" >
+            <option value="" selected disabled>Seleccione un tipo</option>
             @foreach ($types as $type)
                 <option value="{{ $type->id }}">{{ $type->title }}</option>
             @endforeach
         </select>
 
-        <label for="category_id">Category::</label>
+        <label for="category_id">Category:</label>
         <select name="category_id" >
+            <option value="" selected disabled>Seleccione una categoria</option>
             @foreach ($categories as $category)
                 <option value="{{ $category->id }}"> {{ $category->category_title }}</option>
             @endforeach
@@ -40,6 +42,7 @@
 
         <label for="extra_res1">Extra Resource 1:</label>
         <select name="extra_res1" >
+            <option value="" selected disabled></option>
             @foreach ($extraResources as $extraResource)
                 <option value="{{ $extraResource->id }}"> {{ $extraResource->extra_res_title }}</option>
             @endforeach
@@ -47,6 +50,7 @@
 
         <label for="extra_res2">Extra Resource 2:</label>
         <select name="extra_res2" >
+            <option value="" selected disabled></option>
             @foreach ($extraResources as $extraResource)
                 <option value="{{ $extraResource->id }}"> {{ $extraResource->extra_res_title }}</option>
             @endforeach
@@ -54,10 +58,14 @@
 
         <label for="extra_res3">Extra Resource 3:</label>
         <select name="extra_res3" >
+            <option value="" selected disabled></option>
             @foreach ($extraResources as $extraResource)
                 <option value="{{ $extraResource->id }}"> {{ $extraResource->extra_res_title }}</option>
             @endforeach
         </select>
+
+        <button type="submit" class="">Crear</button>
+        <a href="{{ route('resource.index') }}" class="">Cancelar</a>
 
     </form>
 </body>
