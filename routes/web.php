@@ -22,4 +22,5 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/resource', [ResourceController::class,'index'])->name('resource.index');
+Route::get('/resource/create', [ResourceController::class,'create'])->name('resource.create');
 

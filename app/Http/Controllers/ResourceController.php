@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Resource;
+use App\Models\Type;
+use App\Models\Category;
+use App\Models\ExtraResource;
 
 class ResourceController extends Controller
 {
@@ -13,7 +16,7 @@ class ResourceController extends Controller
     public function index()
     {
         $resources= Resource::all();
-        return view('resourceIndex',['resources' => $resources]);
+        return view('resourceIndex', compact('resources'));
         
     }
 
@@ -22,7 +25,10 @@ class ResourceController extends Controller
      */
     public function create()
     {
-        //
+        $types = Type::all();
+        $categories= Category::all();
+        $extraResources= ExtraResource::all();
+        return view('resourceCreate', compact('types','categories','extraResources'));
     }
 
     /**
