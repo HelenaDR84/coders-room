@@ -19,7 +19,15 @@
                     <p><strong>Author:</strong> {{ $resource->author }}</p>
                     <p><strong>Type:</strong> {{ $resource->type->title }}</p>
                     <p><strong>Category:</strong> {{ $resource->category->category_title }}</p>
-                    {{-- <p><strong>Extra Resource 1:</strong> {{ $resource->extraResource1->extra_res_title }}</p> --}}
+                    @if($resource->extraResource1)
+                    <p><strong>Extra Resource 1:</strong> {{ $resource->extraResource1->extra_res_title }}</p>
+                    @endif
+                    @if($resource->extraResource2)
+                    <p><strong>Extra Resource 2:</strong> {{ $resource->extraResource2->extra_res_title }}</p>
+                    @endif
+                    @if($resource->extraResource3)
+                    <p><strong>Extra Resource 3:</strong> {{ $resource->extraResource3->extra_res_title }}</p>
+                    @endif
                 </div>
             </div>
         @endforeach
