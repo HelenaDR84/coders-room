@@ -30,6 +30,11 @@
                     @endif
                     <a href="{{ route('resource.edit',$resource->id) }}" class="">Edit</a>
                     <a href="{{ route('resource.show',$resource->id) }}" class="">View Details</a>
+                    <form method="POST" action="{{ route('resource.destroy', $resource->id) }}"> 
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" value="Delete" class="">
+                    </form>
                 </div>
             </div>
         @endforeach

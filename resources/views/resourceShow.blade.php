@@ -23,6 +23,12 @@
             @if($resource->extraResource3)
             <p><strong>Extra Resource 3:</strong> {{ $resource->extraResource3->extra_res_title }}</p>
             @endif
+            <a href="{{ route('resource.edit',$resource->id) }}" class="">Edit</a>
+            <form method="POST" action="{{ route('resource.destroy', $resource->id) }}"> 
+                @csrf
+                @method('DELETE')
+                <input type="submit" value="Delete" class="">
+            </form>
         </div>
     </div>
 </body>
