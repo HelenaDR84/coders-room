@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ResourceController;
+use App\Models\Resource;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +22,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-
+Route::get('/resource', [ResourceController::class,'index'])->name('resource.index');
+Route::get('/resource/create', [ResourceController::class,'create'])->name('resource.create');
+Route::post('/resource/store', [ResourceController::class,'store'])->name('resource.store');
+Route::get('/resource/show/{resource}',[ResourceController::class, 'show'])->name('resource.show');
+Route::get('/resource/edit/{resource}', [ResourceController::class,'edit'])->name('resource.edit');
+Route::put('/resource/update/{resource}',[ResourceController::class, 'update'])->name('resource.update');
+Route::delete('/resource/destroy/{resource}',[ResourceController::class, 'destroy'])->name('resource.destroy');
