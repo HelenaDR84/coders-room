@@ -40,23 +40,32 @@
         <input type="text" name="repository"  value="{{ $resource->repository }}">
 
         <label for="extra_resource_id1">Extra Resource 1:</label>
-        <select name="extra_resource_id1" >
+        <select name="extra_resource_id1">
+            <option value="" {{ optional($resource->extraResource1)->id ? '' : 'selected' }}></option>
             @foreach ($extraResources as $extraResource)
-                <option value="{{ $extraResource->id }}"{{ $resource->extra_res_id1 == $extraResource->id? 'selected':'' }}> {{ $extraResource->extra_res_title }}</option>
+                <option value="{{ $extraResource->id }}" {{ optional($resource->extraResource1)->id == $extraResource->id ? 'selected' : '' }}>
+                    {{ $extraResource->extra_res_title }}
+                </option>
             @endforeach
         </select>
 
         <label for="extra_resource_id2">Extra Resource 2:</label>
-        <select name="extra_resource_id2" >
+        <select name="extra_resource_id2">
+            <option value="" {{ optional($resource->extraResource2)->id ? '' : 'selected' }}></option>
             @foreach ($extraResources as $extraResource)
-                <option value="{{ $extraResource->id }}"{{ $resource->extra_res_id2 == $extraResource->id? 'selected':'' }}> {{ $extraResource->extra_res_title }}</option>
+                <option value="{{ $extraResource->id }}" {{ optional($resource->extraResource2)->id == $extraResource->id ? 'selected' : '' }}>
+                    {{ $extraResource->extra_res_title }}
+                </option>
             @endforeach
         </select>
 
         <label for="extra_resource_id3">Extra Resource 3:</label>
-        <select name="extra_resource_id3" >
+        <select name="extra_resource_id3">
+            <option value="" {{ optional($resource->extraResource3)->id ? '' : 'selected' }}></option>
             @foreach ($extraResources as $extraResource)
-                <option value="{{ $extraResource->id }}"{{ $resource->extra_res_id3 == $extraResource->id? 'selected':'' }}> {{ $extraResource->extra_res_title }}</option>
+                <option value="{{ $extraResource->id }}" {{ optional($resource->extraResource3)->id == $extraResource->id ? 'selected' : '' }}>
+                    {{ $extraResource->extra_res_title }}
+                </option>
             @endforeach
         </select>
 

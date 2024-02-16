@@ -76,8 +76,10 @@ class ResourceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(ResourceRequest $request, string $id): RedirectResponse
+    public function update(ResourceRequest $request, $resource): RedirectResponse
     {
+        $resource = Resource::find($resource);
+        $resource->update($request->all()); 
         return redirect()->route('resource.index');
     }
 
