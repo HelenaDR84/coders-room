@@ -55,17 +55,22 @@ class ResourceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id):View
+    public function show($resource):View
     {
-        return view('resourceIndex', compact('resources'));
+        $resource = Resource::find($resource);
+        return view('resourceShow', compact('resource'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id):View
+    public function edit($resource):View
     {
-        return view('resourceIndex', compact('resources'));
+        $types = Type::all();
+        $categories= Category::all();
+        $extraResources= ExtraResource::all();
+        $resource = Resource::find($resource);
+        return view('resourceEdit', compact('types','categories','extraResources','resource'));
     }
 
     /**

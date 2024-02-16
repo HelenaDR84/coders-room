@@ -28,6 +28,8 @@
                     @if($resource->extraResource3)
                     <p><strong>Extra Resource 3:</strong> {{ $resource->extraResource3->extra_res_title }}</p>
                     @endif
+                    <a href="{{ route('resource.edit',$resource->id) }}" class="">Edit</a>
+                    <a href="{{ route('resource.show',$resource->id) }}" class="">View Details</a>
                 </div>
             </div>
         @endforeach
