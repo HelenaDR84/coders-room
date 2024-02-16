@@ -23,4 +23,5 @@ Route::get('/', function () {
 });
 Route::get('/resource', [ResourceController::class,'index'])->name('resource.index');
 Route::get('/resource/create', [ResourceController::class,'create'])->name('resource.create');
+Route::post('/resource/store', [ResourceController::class,'store'])->name('resource.store');
 

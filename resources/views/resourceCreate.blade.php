@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="">
-
+    <form action="{{ route('resource.store') }}" method="POST">
+        @csrf
         <label for="type_id">Type:</label>
         <select name="type_id" >
             <option value="" selected disabled>Seleccione un tipo</option>
@@ -40,24 +40,24 @@
         <label for="repository">Repository:</label>
         <input type="text" name="repository"  value="{{ old('repository') }}">
 
-        <label for="extra_res1">Extra Resource 1:</label>
-        <select name="extra_res1" >
+        <label for="extra_resource_id1">Extra Resource 1:</label>
+        <select name="extra_resource_id1" >
             <option value="" selected disabled></option>
             @foreach ($extraResources as $extraResource)
                 <option value="{{ $extraResource->id }}"> {{ $extraResource->extra_res_title }}</option>
             @endforeach
         </select>
 
-        <label for="extra_res2">Extra Resource 2:</label>
-        <select name="extra_res2" >
+        <label for="extra_resource_id2">Extra Resource 2:</label>
+        <select name="extra_resource_id2" >
             <option value="" selected disabled></option>
             @foreach ($extraResources as $extraResource)
                 <option value="{{ $extraResource->id }}"> {{ $extraResource->extra_res_title }}</option>
             @endforeach
         </select>
 
-        <label for="extra_res3">Extra Resource 3:</label>
-        <select name="extra_res3" >
+        <label for="extra_resource_id3">Extra Resource 3:</label>
+        <select name="extra_resource_id3" >
             <option value="" selected disabled></option>
             @foreach ($extraResources as $extraResource)
                 <option value="{{ $extraResource->id }}"> {{ $extraResource->extra_res_title }}</option>
