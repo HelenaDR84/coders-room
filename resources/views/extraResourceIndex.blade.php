@@ -19,12 +19,12 @@
                     <p><strong>Link:</strong> {{ $extraResource->link }}</p>
 
                     <a href="{{ route('extraResource.edit',$extraResource->id) }}" class="">Edit</a>
-                    {{-- <a href="{{ route('extraResource.show',$extraResource->id) }}" class="">View Details</a>
+                    {{-- <a href="{{ route('extraResource.show',$extraResource->id) }}" class="">View Details</a> --}}
                     <form method="POST" action="{{ route('extraResource.destroy', $extraResource->id) }}">
                         @csrf
                         @method('DELETE')
                         <input type="submit" value="Delete" class="">
-                    </form> --}}
+                    </form>
                 </div>
             </div>
         @endforeach

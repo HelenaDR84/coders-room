@@ -66,8 +66,10 @@ class ExtraResourceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($extraResource): RedirectResponse
     {
-        //
+        $extraResource = ExtraResource::find($extraResource);
+        $extraResource->delete();
+        return redirect()->route('extraResource.index');
     }
 }
