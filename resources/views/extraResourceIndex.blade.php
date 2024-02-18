@@ -21,5 +21,6 @@
             </div>
         @endforeach
     @endif
+    <a href="{{ route('extraResource.create') }}" class="mt-4 text-blue-500 p-3">Add Extra Resource</a>
 </body>
 </html>

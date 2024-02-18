@@ -23,7 +23,7 @@ class ExtraResourceController extends Controller
      */
     public function create()
     {
-        //
+        return view('extraResourceCreate');
     }
 
     /**
