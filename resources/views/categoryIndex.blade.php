@@ -18,5 +18,6 @@
             
             @endforeach
         @endif
+    <a href="{{ route('category.create') }}" class="">Add Category</a>
 </body>
 </html>
