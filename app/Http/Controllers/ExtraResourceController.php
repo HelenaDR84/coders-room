@@ -6,7 +6,7 @@ use App\Http\Requests\ExtraResourceRequest;
 use App\Http\Controllers\Controller;
 use App\Models\ExtraResource;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
 
 class ExtraResourceController extends Controller
 {
@@ -30,9 +30,10 @@ class ExtraResourceController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ExtraResourceRequest $request): RedirectResponse
     {
-        //
+        ExtraResource::create($request->all());
+        return redirect()->route('extraResource.index');
     }
 
     /**
