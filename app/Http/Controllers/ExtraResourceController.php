@@ -56,9 +56,11 @@ class ExtraResourceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ExtraResourceRequest $request, $extraResource): RedirectResponse
     {
-        //
+        $extraResource = ExtraResource::find($extraResource);
+        $extraResource->update($request->all());
+        return redirect()->route('extraResource.index');
     }
 
     /**
