@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ExtraResourceRequest;
 use App\Http\Controllers\Controller;
 use App\Models\ExtraResource;
 use Illuminate\Contracts\View\View;
