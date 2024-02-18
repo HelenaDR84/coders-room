@@ -39,9 +39,10 @@ class ExtraResourceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($extraResource): View
     {
-        //
+        $extraResource = ExtraResource::find($extraResource);
+        return view('extraResourceShow', compact('extraResource'));
     }
 
     /**
