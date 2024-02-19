@@ -11,6 +11,12 @@
     <div class="d-flex justify-content-between align-items-center mb-3 p-3">
         <div>
             <h2>{{ $type->title }}</h2>
+            <a href="{{ route('type.edit',$type->id) }}" class="">Edit</a>
+            <form method="POST" action="{{ route('type.destroy', $type->id) }}"> 
+                @csrf
+                @method('DELETE')
+                <input type="submit" value="Delete" class="">
+            </form>
         </div>
     </div>
 </body>
