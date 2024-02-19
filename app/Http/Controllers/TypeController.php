@@ -17,9 +17,6 @@ class TypeController extends Controller
       return view('typeIndex', compact('types'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
     return view('typeCreate');
@@ -37,20 +34,16 @@ class TypeController extends Controller
         return view('typeShow', compact('type'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+
+    public function edit($type)
     {
-        //
+        $type = Type::find($type);
+        return view('typeEdit', compact('type'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-        //
+    
     }
 
     /**
