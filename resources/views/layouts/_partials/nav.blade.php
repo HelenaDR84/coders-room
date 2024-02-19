@@ -7,6 +7,7 @@
             </a>
     
             <div class="space-x-4">
+                <a href="{{ route('home') }}" class="text-white font-semibold">Home</a>
                 <a href="{{ route('resource.index') }}" class="text-white font-semibold">Resources</a>
                 <a href="{{ route('type.index') }}" class="text-white font-semibold">Types</a>
                 <a href="{{ route('category.index') }}" class="text-white font-semibold">Categories</a>

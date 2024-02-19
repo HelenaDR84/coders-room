@@ -24,7 +24,7 @@ use App\Http\Controllers\TypeController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/resource', [ResourceController::class,'index'])->name('resource.index');
 Route::get('/resource/create', [ResourceController::class,'create'])->name('resource.create');
