@@ -9,9 +9,7 @@ use Illuminate\Http\Request;
 
 class TypeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+   
     public function index():View
     {
       $types=Type::all();
@@ -23,12 +21,9 @@ class TypeController extends Controller
      */
     public function create()
     {
-        //
+    return view('typeCreate');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         //
