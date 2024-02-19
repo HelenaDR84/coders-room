@@ -52,4 +52,10 @@ Route::get('/type/edit/{type}', [TypeController::class, 'edit'])->name('type.edi
 Route::put('/type/update/{type}', [TypeController::class, 'update'])->name('type.update');
 Route::delete('/type/destroy/{type}', [TypeController::class, 'destroy'])->name('type.destroy');
 
-
+Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
+Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
+Route::get('/category/show/{category}', [CategoryController::class, 'show'])->name('category.show');
+Route::get('/category/edit/{category}', [CategoryController::class, 'edit'])->name('category.edit');
+Route::put('/category/update/{category}', [CategoryController::class, 'update'])->name('category.update');
+Route::delete('/category/destroy/{category}', [CategoryController::class, 'destroy'])->name('category.destroy');
