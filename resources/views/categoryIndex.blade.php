@@ -14,8 +14,9 @@
             @foreach($categories as $category)
                 <div class="d-flex justify-content-between align-items-center mb-3 p-3">
                     <h2>{{ $category->category_title }}</h2>
+                    <a href="{{ route('category.show',$category->id) }}" class="">View Details</a>
                 </div>
-            
+                
             @endforeach
         @endif
     <a href="{{ route('category.create') }}" class="">Add Category</a>

@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ResourceController;
 use App\Models\Resource;
 use Illuminate\Support\Facades\Route;
@@ -40,3 +40,11 @@ Route::get('/extraResource/show/{extraResource}', [ExtraResourceController::clas
 Route::get('/extraResource/edit/{extraResource}', [ExtraResourceController::class, 'edit'])->name('extraResource.edit');
 Route::put('/extraResource/update/{extraResource}', [ExtraResourceController::class, 'update'])->name('extraResource.update');
 Route::delete('/extraResource/destroy/{extraResource}', [ExtraResourceController::class, 'destroy'])->name('extraResource.destroy');
+
+Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
+Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
+Route::get('/category/show/{category}', [CategoryController::class, 'show'])->name('category.show');
+Route::get('/category/edit/{category}', [CategoryController::class, 'edit'])->name('category.edit');
+Route::put('/category/update/{category}', [CategoryController::class, 'update'])->name('category.update');
+Route::delete('/category/destroy/{category}', [CategoryController::class, 'destroy'])->name('category.destroy');
