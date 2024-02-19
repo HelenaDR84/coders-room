@@ -41,9 +41,11 @@ class TypeController extends Controller
         return view('typeEdit', compact('type'));
     }
 
-    public function update(Request $request, string $id)
+    public function update(TypeRequest $request,$type)
     {
-    
+        $type = Type::find($type);
+        $type->update($request->all());
+        return redirect()->route('type.index');
     }
 
     /**

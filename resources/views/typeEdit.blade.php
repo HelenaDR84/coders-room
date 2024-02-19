@@ -7,7 +7,7 @@
     <title>Edit Type</title>
 </head>
 <body>
-    <form action="{{ route('type.store'),$type->id}}" method="POST">
+    <form action="{{ route('type.update',$type->id)}}" method="POST">
         @csrf
         @method('PUT')
     <label for="title">Title:</label>
