@@ -68,8 +68,8 @@ class CategoryController extends Controller
      */
     public function destroy($category)
     {
-        $resource = Category::find($category);
-        $resource->delete();
+        $category = Category::find($category);
+        $category->delete();
         return redirect()->route('category.index');
     }
 }
