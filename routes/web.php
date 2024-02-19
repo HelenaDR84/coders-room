@@ -1,12 +1,10 @@
 <?php
 
-
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ResourceController;
 use App\Models\Resource;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExtraResourceController;
-
-
 use App\Http\Controllers\TypeController;
 
 /*
