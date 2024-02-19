@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-    <title>resources</title>
-    @vite('resources/css/app.css')
-</head>
-<body>
+@extends('layouts.htmlStructure')
+
+@section('title', 'Resources')
+
+@section('content')
     <h1 class="pt-4 text-center text-orange-500 text-2xl font-bold">My Resources</h1>
 
     <a href="{{ route('resource.create') }}" class="mt-4 ml-[1%] bg-orange-500 text-white py-2 px-4 rounded-xl text-center hover:bg-orange-600 focus:outline-none focus:ring focus:border-orange-300 self-end"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Resource</a>
@@ -51,5 +45,4 @@
             </table>
         </div>
     @endif
-</body>
-</html>
+@endsection

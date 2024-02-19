@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-    <title>show</title>
-    @vite('resources/css/app.css')
-</head>
-<body>
-    <div class="max-w-2xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+@extends('layouts.htmlStructure')
+
+@section('title', 'Resource Details')
+
+@section('content')
+    <div class="max-w-2xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-xl">
         <div class="flex justify-between items-center mt-2 mb-4">
             <p class="text-gray-500">#{{ $resource->id }}</p>
             <p class="text-sm text-gray-500">Date: {{ $resource->created_at }}</p>
@@ -50,5 +44,4 @@
             <a href="{{ route('resource.index') }}" class="text-white bg-gray-400 hover:bg-gray-600 px-4 py-2 rounded-full focus:outline-none focus:ring focus:border-gray-300 transition duration-300 ease-in-out"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to List</a>
         </div>
     </div>
-</body>
-</html>
+ @endsection
