@@ -6,7 +6,7 @@
     <title>Category edit</title>
 </head>
 <body>
-    <form action="{{ route('category.store'),$category->id}}" method="POST">
+    <form action="{{ route('category.update',$category->id)}}" method="POST">
             @csrf
             @method('PUT')
             <label for="category_title">Category name:</label>
