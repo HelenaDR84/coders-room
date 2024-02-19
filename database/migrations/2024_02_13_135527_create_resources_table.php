@@ -25,11 +25,11 @@ return new class extends Migration
             $table->unsignedBigInteger('extra_resource_id2')->nullable();
             $table->unsignedBigInteger('extra_resource_id3')->nullable();
 
-            $table->foreign('type_id')->references('id')->on('types');
-            $table->foreign('category_id')->references('id')->on('categories');
-            $table->foreign('extra_resource_id1')->references('id')->on('extra_resources');
-            $table->foreign('extra_resource_id2')->references('id')->on('extra_resources');
-            $table->foreign('extra_resource_id3')->references('id')->on('extra_resources');
+            $table->foreign('type_id')->references('id')->on('types')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('extra_resource_id1')->references('id')->on('extra_resources')->onDelete('set null');
+            $table->foreign('extra_resource_id2')->references('id')->on('extra_resources')->onDelete('set null');
+            $table->foreign('extra_resource_id3')->references('id')->on('extra_resources')->onDelete('set null');
         });
     }
 

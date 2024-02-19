@@ -17,7 +17,7 @@
                 <h2>{{ $type->title }}</h2> 
                 <a href="{{ route('type.edit',$type->id) }}" class="">Edit</a>
                 <a href="{{ route('type.show',$type->id) }}" class="">View Details</a>
-                <form method="POST" action="{{ route('type.destroy', $type->id) }}"> 
+                <form method="POST" action="{{ route('type.destroy', $type->id) }}" onsubmit="return confirmDelete()"> 
                     @csrf
                     @method('DELETE')
                     <input type="submit" value="Delete" class="">
@@ -25,6 +25,11 @@
             </div>
         @endforeach  
      @endif    
-     <a href="{{ route('type.create') }}" class="mt-4 text-blue-500 p-3">Add Type</a>   
+     <a href="{{ route('type.create') }}" class="mt-4 text-blue-500 p-3">Add Type</a>  
+     <script>
+        function confirmDelete() {
+            return confirm("Are you sure you want to delete this type? Doing so will delete all associated resources.");
+        }
+    </script> 
 </body>
 </html>

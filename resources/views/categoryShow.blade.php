@@ -11,12 +11,17 @@
             <div>
                 <h2>{{ $category->category_title }}</h2>
                 <a href="{{ route('category.edit',$category->id) }}" class="">Edit</a>
-            <form method="POST" action="{{ route('category.destroy', $category->id) }}"> 
+            <form method="POST" action="{{ route('category.destroy', $category->id) }}" onsubmit="return confirmDelete()"> 
                 @csrf
                 @method('DELETE')
                 <input type="submit" value="Delete" class="">
             </form>
             </div>
         </div>
+        <script>
+            function confirmDelete() {
+                return confirm("Are you sure you want to delete this category? Doing so will delete all associated resources.");
+            }
+        </script>
 </body>
 </html>

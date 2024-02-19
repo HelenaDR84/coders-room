@@ -12,12 +12,17 @@
         <div>
             <h2>{{ $type->title }}</h2>
             <a href="{{ route('type.edit',$type->id) }}" class="">Edit</a>
-            <form method="POST" action="{{ route('type.destroy', $type->id) }}"> 
+            <form method="POST" action="{{ route('type.destroy', $type->id) }}" onsubmit="return confirmDelete()"> 
                 @csrf
                 @method('DELETE')
                 <input type="submit" value="Delete" class="">
             </form>
         </div>
     </div>
+    <script>
+        function confirmDelete() {
+            return confirm("Are you sure you want to delete this type? Doing so will delete all associated resources.");
+        }
+    </script> 
 </body>
 </html>
