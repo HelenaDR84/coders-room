@@ -18,6 +18,7 @@
             
             </div>
         @endforeach  
-     @endif       
+     @endif    
+     <a href="{{ route('type.create') }}" class="mt-4 text-blue-500 p-3">Add Type</a>   
 </body>
 </html>

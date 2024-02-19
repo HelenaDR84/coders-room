@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TypeRequest;
 use App\Models\Type;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
@@ -24,9 +25,10 @@ class TypeController extends Controller
     return view('typeCreate');
     }
 
-    public function store(Request $request)
+    public function store(TypeRequest $request)
     {
-        //
+        Type::create($request->all());
+        return redirect()->route('type.index');  
     }
 
     /**
