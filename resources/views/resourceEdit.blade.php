@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <title>Document</title>
+    @vite('resources/css/app.css')
 </head>
 <body>
     <form action="{{ route('resource.update', $resource->id) }}" method="POST" class="flex flex-col w-2/4 bg-purple-800 p-8 rounded-lg shadow-md ">
