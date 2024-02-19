@@ -14,9 +14,9 @@
     @else
         @foreach($types as $type)
             <div class="d-flex justify-content-between align-items-center mb-3 p-3">
-                <h2>{{ $type->title }}</h2>
-            
+                <h2>{{ $type->title }}</h2> 
             </div>
+            <a href="{{ route('type.show',$type->id) }}" class="">View Details</a>
         @endforeach  
      @endif    
      <a href="{{ route('type.create') }}" class="mt-4 text-blue-500 p-3">Add Type</a>   

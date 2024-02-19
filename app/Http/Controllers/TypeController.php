@@ -31,12 +31,10 @@ class TypeController extends Controller
         return redirect()->route('type.index');  
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function show($type)
     {
-        //
+        $type = Type::find($type);
+        return view('typeShow', compact('type'));
     }
 
     /**
