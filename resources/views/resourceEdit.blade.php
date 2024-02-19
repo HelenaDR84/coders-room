@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-    <title>Document</title>
-    @vite('resources/css/app.css')
-</head>
-<body>
-    <form action="{{ route('resource.update', $resource->id) }}" method="POST" class="flex flex-col w-2/4 bg-purple-800 p-8 rounded-lg shadow-md ">
+@extends('layouts.htmlStructure')
+
+@section('title', 'Update Resource')
+
+@section('content')
+    <form action="{{ route('resource.update', $resource->id) }}" method="POST" class="mx-auto w-2/4 bg-purple-800 p-8 rounded-lg shadow-md mt-5">
 
         @csrf
         @method('PUT')
@@ -132,5 +126,4 @@
     </div>
 
     </form>
-</body>
-</html>
+@endsection
