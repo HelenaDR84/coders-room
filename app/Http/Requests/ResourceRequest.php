@@ -29,9 +29,9 @@ class ResourceRequest extends FormRequest
             'recording'=>'required|url',
             'presentation'=>'required|url',
             'repository'=>'required|url',
-            'extra_resource_id1'=>'exists:extra_resources,id',
-            'extra_resource_id2'=>'exists:extra_resources,id',
-            'extra_resource_id3'=>'exists:extra_resources,id',
+            'extra_resource_id1'=>'nullable|exists:extra_resources,id',
+            'extra_resource_id2'=>'nullable|exists:extra_resources,id',
+            'extra_resource_id3'=>'nullable|exists:extra_resources,id',
         ];
     }
 }

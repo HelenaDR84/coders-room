@@ -17,7 +17,7 @@
             <div class="w-1/2">
                 <label for="type_id" class="block text-md font-semibold text-white">Type:</label>
                 <select name="type_id" class="mt-1 p-2 w-full border rounded-md bg-white text-gray-800">
-                    <option value="" selected disabled>Seleccione un tipo</option>
+                    <option value="" selected disabled>Select type</option>
                     @foreach ($types as $type)
                     <option value="{{ $type->id }}">{{ $type->title }}</option>
                     @endforeach
@@ -30,7 +30,7 @@
             <div class="w-1/2">
                 <label for="category_id" class="block text-md font-semibold text-white">Category:</label>
                 <select name="category_id" class="mt-1 p-2 w-full border rounded-md bg-white text-gray-800">
-                    <option value="" selected disabled>Seleccione una categoría</option>
+                    <option value="" selected disabled>Select category</option>
                     @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->category_title }}</option>
                     @endforeach
@@ -123,7 +123,7 @@
     </div>
         
         <div class="mb-5">
-            <button type="submit" class="bg-purple-800 hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-purple-300 text-white font-semibold rounded-lg text-sm px-5 py-2.5 text-center"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Add</button>
+            <button type="submit" class="bg-purple-800 hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-purple-300 text-white font-semibold rounded-lg text-sm px-5 py-2.5 text-center"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Resource</button>
             <a href="{{ route('resource.index') }}" class="mt-2 bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white font-semibold rounded-lg text-sm px-5 py-2.5 text-center inline-block"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</a>
         </div>
         

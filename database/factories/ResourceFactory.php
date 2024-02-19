@@ -25,7 +25,7 @@ class ResourceFactory extends Factory
             'title' => fake()->sentence(),
             'author' => fake()->name(),
             'recording' => fake()->url(),
-            'presentation' => fake()->sentence(),
+            'presentation' => fake()->url(),
             'repository' => fake()->url(),
             'extra_resource_id1' => ExtraResource::all()->random()->id
         ];
