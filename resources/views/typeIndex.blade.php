@@ -17,6 +17,11 @@
                 <h2>{{ $type->title }}</h2> 
                 <a href="{{ route('type.edit',$type->id) }}" class="">Edit</a>
                 <a href="{{ route('type.show',$type->id) }}" class="">View Details</a>
+                <form method="POST" action="{{ route('type.destroy', $type->id) }}"> 
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" value="Delete" class="">
+                </form>
             </div>
         @endforeach  
      @endif    
