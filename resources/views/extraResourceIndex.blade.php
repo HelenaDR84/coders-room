@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Extra Resources Index</title>
+    @vite('resources/css/app.css')
+</head>
+<body>
+    <h1 class="pt-4 text-center">My Extra Resources</h1>
+    @if($extraResources->isEmpty())
+        <p>The table is empty</p>
+    @else
+        @foreach($extraResources as $extraResource)
+            <div class="d-flex justify-content-between align-items-center mb-3 p-3">
+                <div>
+                    <h2>{{ $extraResource->extra_res_title }}</h2>
+                    <p><strong>Link:</strong> {{ $extraResource->link }}</p>
+
+                    <a href="{{ route('extraResource.edit',$extraResource->id) }}" class="">Edit</a>
+                    <a href="{{ route('extraResource.show',$extraResource->id) }}" class="">View Details</a>
+                    <form method="POST" action="{{ route('extraResource.destroy', $extraResource->id) }}">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" value="Delete" class="">
+                    </form>
+                </div>
+            </div>
+        @endforeach
+    @endif
+    <a href="{{ route('extraResource.create') }}" class="mt-4 text-blue-500 p-3">Add Extra Resource</a>
+</body>
+</html>
