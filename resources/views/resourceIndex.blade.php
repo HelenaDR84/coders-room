@@ -31,7 +31,7 @@
                             <td class="border p-2">{{ $resource->author }}</td>
                             <td class="border p-2"><span class="text-white bg-orange-500 px-2 py-1 rounded">{{ $resource->category->category_title }}</span></td>
                             <td class="border p-2 space-x-2">
-                                <a href="{{ route('resource.edit',$resource->id) }}" class="text-white bg-violet-500 hover:bg-violet-600 px-4 py-2 rounded-full focus:outline-none focus:ring focus:border-violet-300 transition duration-300 ease-in-out"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+                                <a href="{{ route('resource.edit',$resource->id) }}" class="text-white bg-violet-500 hover:bg-violet-600 px-4 py-2 rounded-full focus:outline-none tfocus:ring focus:border-violet-300 transition duration-300 ease-in-out"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
                                 <a href="{{ route('resource.show',$resource->id) }}" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out"> <i class="fa fa-eye"></i></a>
                                 <form method="POST" action="{{ route('resource.destroy', $resource->id) }}" class="inline">
                                     @csrf
