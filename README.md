@@ -7,7 +7,7 @@ To be introduced to full stack web development using PHP with Laravel and MySQL.
 This is a functional web application of a resource manager, where users can add, edit and delete resources. The application allows users to manage their resources efficiently, keeping an organised record.
 
 ## Final Result
-  <img src="./public/images/resources_page.png" alt="landing-page">
+  <img src="./public/images/resource_page.png" alt="landing-page">
 
 ## Process 
 ### Tecnologies
