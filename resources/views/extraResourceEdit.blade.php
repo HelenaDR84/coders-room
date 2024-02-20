@@ -1,30 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edit Extra Resource</title>
-</head>
-<body>
-    <form action="{{ route('extraResource.update', $extraResource->id) }}" method="POST">
+@extends('layouts.htmlStructure')
+
+@section('title', 'Update Extra Resource')
+
+@section('content')
+    <form action="{{ route('extraResource.update', $extraResource->id) }}" method="POST" class="mx-auto w-2/4 bg-purple-800 p-8 rounded-lg shadow-md mt-5">
         @csrf
         @method('PUT')
-        <label for="extra_res_title">Title of extra resource:</label>
-        <input type="text" name="extra_res_title"  value="{{ $extraResource->extra_res_title }}">
-        @error('extra_res_title')
-        <div class="text-danger">{{ $message }}</div>
-        @enderror
 
-        <label for="link">Link:</label>
-        <input type="text" name="link"  value="{{ $extraResource->link }}">
-        @error('link')
-        <div class="text-danger">{{ $message }}</div>
-        @enderror
+        <div class="mb-5">
+            <label for="extra_res_title" class="block text-md font-semibold text-white">Title of extra resource:</label>
+            <input type="text" name="extra_res_title"  value="{{ $extraResource->extra_res_title }}" class="mt-1 p-2 w-full border rounded-md bg-white text-gray-800">
+            @error('extra_res_title')
+            <div class="text-red-500 bg-red-200 text-sm mt-1 rounded">{{ $message }}</div>
+            @enderror
+        </div>
 
-        <button type="submit" class="">Update</button>
-        <a href="{{ route('extraResource.index') }}" class="">Cancel</a>
+        <div class="mb-5">
+            <label for="link" class="block text-md font-semibold text-white">Link:</label>
+            <input type="text" name="link"  value="{{ $extraResource->link }}" class="mt-1 p-2 w-full border rounded-md bg-white text-gray-800">
+            @error('link')
+            <div class="text-red-500 bg-red-200 text-sm mt-1 rounded">{{ $message }}</div>
+            @enderror
+        </div>
 
+        <div class="mb-5">
+            <button type="submit" class="bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 text-white font-semibold rounded-lg text-sm px-5 py-2.5 text-center"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Update</button>
+            <a href="{{ route('extraResource.index') }}" class="mt-2 bg-gray-500 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white font-semibold rounded-lg text-sm px-5 py-2.5 text-center inline-block"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</a>
+        </div>
     </form>
-</body>
-</html>
+@endsection
