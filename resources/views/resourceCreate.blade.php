@@ -122,6 +122,4 @@
         </div>
         
     </form>
-</body>
-</html>
 @endsection
