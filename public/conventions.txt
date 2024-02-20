@@ -1,0 +1,25 @@
+CONVENTIONS:
+Folders. Blade folders will be written in lower case. Those containing classes such as the conroller in PascalCase.
+Methods in camelCase.
+Uppercase classes in PascalCase.
+Variables: They start with a dollar sign ($). They are named in camelCase. The second character can be a letter or an underscore. Example: $myVariable.
+Models: PascalCase
+Git branches in infinitve and with feature- the first word.
+Primary Keys and Foreign Keys:
+The primary key should normally be "id".
+Foreign keys should be the model name (singular), with "_id" at the end (assuming the primary key in the other table is "id").
+Examples: comment_id, user_id.
+Database tables in snake_case and plural.
+
+CONVENCIONES:
+Carpetas. Las carpetas .blade se escribirán en minúsculas. Las que contienen clases como el conrolador en PascalCase.
+Métodos en camelCase.
+Clases en mayúsculas en PascalCase.
+Variables: Comienzan con el signo dólar ($). Se nombran en camelCase. El segundo carácter puede ser una letra o un guión bajo. Ejemplo: $miVariable.
+Modelos: PascalCase
+Ramas de git en infinitvo  y con feature- la primera palabra.
+Claves Primarias y Claves Foráneas:
+La clave primaria debe ser normalmente “id”.
+Las claves foráneas deben ser el nombre del modelo (en singular), con “_id” al final (asumiendo que la clave primaria en la otra tabla es “id”).
+Ejemplos: comment_id, user_id.
+Tablas de bases de datos en snake_case y en plural.
