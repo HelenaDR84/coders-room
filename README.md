@@ -1,21 +1,26 @@
-# Coders-Room
+# 📝 P9 CODERS´ ROOM 
+ <img src="./public/images/LogoCodersRoom.png" alt="landing-page" width="170" height="170">
+<br>
 
-## PEDAGOGICAL OBJECTIVE  
-To be introduced to full stack web development using PHP with Laravel and MySQL. The project allows the application of concepts such as form handling, database queries, data validation and information manipulation.
+## Pedagogical Objective
+To be introduced to full stack web development using PHP with Laravel and MySQL. The project allows the application of concepts such as form handling, database queries, data validation and information manipulation. 
+<br><br>
 
-## CONTEXT / NEED
+## Context / Need
 This is a functional web application of a resource manager, where users can add, edit and delete resources. The application allows users to manage their resources efficiently, keeping an organised record.
+<br>
 
 ## Final Result
   <img src="./public/images/resource_page.png" alt="landing-page">
 
-## Process 
-### Tecnologies
+## 🛠️ Tecnologies:
 For this project we have used :
 
  <img src="https://skillicons.dev/icons?i=html,php,js,tailwind,nodejs,laravel,)](https://skillicons.dev"/>
+ <br>
 
-## Installation Steps
+## 💻 Installation Steps:
+
 1.  Download and Install Node.js: Visit the official[website](https://nodejs.org/en) and download the version compatible with your operating system. Follow the installation instructions provided on the website.
 
 2. Download and Install XAMPP: Visit the official XAMPP [website](https://www.apachefriends.org/index.html) and download the version compatible with your operating system (Windows, macOS or Linux). Follow the installation instructions provided on the website.
@@ -53,13 +58,16 @@ CREATE DATABASE coders_room;
 
 15. Access to the App: Open your browser and visit http://localhost:8000. You should see your application running.
 
-16. Access your project in the browser: Open your web browser and visit the project path with localhost first, e.g.: http://localhost/P8_ToDo_List/
+16. Access your project in the browser: Open your web browser and visit the project path with localhost first.
 
 17. Enjoy it.
 
+## 📜License
 
-## Authors
-created with 💜 by:
+This project is licensed under the terms of the MIT license. This means that you can use, copy, modify and distribute the code freely, as long as you acknowledge the original authorship and do not use it for commercial purposes.
+
+## 👩‍💻Authors
+Created with 💜 by:
 - [NathaliaRuiz](https://github.com/NathaRuiz)
 - [MariaGarcia](https://github.com/MariaGarciaJordan)
 - [HelenaDR84](https://github.com/HelenaDR84)
