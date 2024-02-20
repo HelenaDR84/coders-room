@@ -6,18 +6,16 @@ To be introduced to full stack web development using PHP with Laravel and MySQL.
 ## CONTEXT / NEED
 This is a functional web application of a resource manager, where users can add, edit and delete resources. The application allows users to manage their resources efficiently, keeping an organised record.
 
+## Final Result
+  <img src="./public/images/resources_page.png" alt="landing-page">
+
 ## Process 
 ### Tecnologies
 For this project we have used :
 
- <img src="https://skillicons.dev/icons?i=html,php,tailwind,nodejs,laravel,)](https://skillicons.dev"/>
+ <img src="https://skillicons.dev/icons?i=html,php,js,tailwind,nodejs,laravel,)](https://skillicons.dev"/>
 
-### Mockups 
-Has the following views:
-[Mockups](https://drive.google.com/drive/folders/1uxVYYORWDkrPsIkEHlgDco2ciTzt-9E0?usp=sharing)
-
-
-## Installations Steps
+## Installation Steps
 1.  Download and Install Node.js: Visit the official[website](https://nodejs.org/en) and download the version compatible with your operating system. Follow the installation instructions provided on the website.
 
 2. Download and Install XAMPP: Visit the official XAMPP [website](https://www.apachefriends.org/index.html) and download the version compatible with your operating system (Windows, macOS or Linux). Follow the installation instructions provided on the website.
